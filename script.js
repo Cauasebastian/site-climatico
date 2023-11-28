@@ -1,6 +1,7 @@
 // variaveis e seleçao de elementos
 const apiKey = "e584801326d935ddbb38588ddf02051c"
-const apiCountryURL = "https://flagsapi.com/.png"
+const apiCountryURL = "https://flagsapi.com/"
+const apiUnsplash = "https://source.unsplash.com/1600x900/?";
 
 const cityInput = document.querySelector("#city-input")
 const searchBtn = document.querySelector("#search")
@@ -10,8 +11,10 @@ const tempElement = document.querySelector("#temperature span")
 const descElement = document.querySelector("#description")
 const weatherIconElement = document.querySelector("#weather-icon")
 const countryElement = document.querySelector("#country")
-const umidityElement = document.querySelector("#umidity span")
+const humidityElement = document.querySelector("#humidity span")
 const windElement = document.querySelector("#wind span")
+
+const weatherContainer = document.querySelector("#weather-data")
 
 //funções
     const getWeatherData = async (city) => {
@@ -32,8 +35,16 @@ const showWeatherData = async (city) => {
     weatherIconElement.setAttribute(
     "src", 
     `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
-    countryElement.setAttribute("src", apiCountryURL + data.sys.country);
+    const countryCode = data.sys.country.toLowerCase();
+    countryElement.setAttribute("src", `https://flagcdn.com/w2560/${countryCode}.png`);
+    humidityElement.innerText = `${data.main.humidity}%`;
+    windElement.innerText = `${data.wind.speed} km/h`;
 
+        weatherContainer.classList.remove("hide");
+
+        document.body.style.backgroundImage = `url("${apiUnsplash + city}")`;
+
+        weatherContainer.classList.remove("hide");
 
 }
 //Eventos
@@ -43,3 +54,18 @@ searchBtn.addEventListener("click",(e) => {
     const city = cityInput.value;
     showWeatherData(city);
 })
+
+cityInput.addEventListener("keyup", (e) => {
+    if (e.code === "Enter") {
+      const city = e.target.value;
+  
+      showWeatherData(city);
+    }
+  });
+  suggestionButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const city = btn.getAttribute("id");
+  
+      showWeatherData(city);
+    });
+  });

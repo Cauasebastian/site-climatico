@@ -64,9 +64,12 @@ body {
     margin: 0.6rem;
 }
 #country {
-    height: 40px;
+    height: 22px;
 }
-
+#description {
+    font-weight: bold;
+    text-transform: capitalize;
+}
 #description-container {
     display: flex;
     justify-content: center;
@@ -78,9 +81,9 @@ body {
     justify-content: center;
     align-items: center;
 }
-#details-container #umidity {
+#details-container #humidity {
     border-right: 1px solid #fff;
     margin: 0.6rem;
     padding: 0.6rem;
-    
+
 }
