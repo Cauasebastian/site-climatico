@@ -9,6 +9,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-size: cover;
+
 }
 .hide {
     display: none;
