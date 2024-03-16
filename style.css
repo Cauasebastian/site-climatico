@@ -8,9 +8,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
-
+    width: 100%;
 }
 .hide {
     display: none;
