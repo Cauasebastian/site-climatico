@@ -3,24 +3,28 @@
     margin: 0;
     font-family: "ubuntu", sans-serif;
 }
+
 body {
-    background: linear-gradient(180deg,#594cee 0%, #8dd0f5 100%);
+    background: linear-gradient(180deg, #594cee 0%, #8dd0f5 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Garante que o conteúdo ocupe no mínimo 100% da altura da viewport */
     background-size: cover;
+    background-attachment: fixed; /* Fixa a imagem de fundo */
+}
 
-}
-.hide {
-    display: none;
-}
 .container {
     background-color: #5c54ed;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 2rem;
     color: #fdfdfd;
     border-radius: 1rem;
+    max-width: 90%; /* Limita a largura máxima do container */
+    width: 400px; /* Define uma largura padrão */
+}
+.hide {
+    display: none;
 }
 /*formulario*/
 
