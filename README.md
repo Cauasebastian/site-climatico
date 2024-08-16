@@ -29,6 +29,17 @@ Embora tenha sido um desafio no começo, cada obstáculo superado me proporciono
 
 Se você gostou do meu trabalho ou tem alguma ideia para compartilhar, ficarei feliz em ouvir! Você pode me encontrar no LinkedIn [aqui](www.linkedin.com/in/cauã-sebastian-57a532259).
 
+## Imagens
+
+![Imagem do projeto](./assets/imagem1.png)
+
+![Imagem do projeto](./assets/imagem2.png)
+
+![Imagem do projeto](./assets/imagem3.png)
+
+![Imagem do projeto](./assets/imagem4.png)
+
+![Imagem do projeto](./assets/imagem5.png)
 
 
 ## Como Executar o Projeto
